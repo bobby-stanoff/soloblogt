@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soloblogt</title>
+
+    <meta name="description" content="">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <!-- Boxicons CSS -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/trix@2.0.8/dist/trix.css">
+    <script type="text/javascript" src="https://unpkg.com/trix@2.0.8/dist/trix.umd.min.js"></script>
+    <!-- Tailwind -->
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script> -->
+    <link href="./output.css" rel="stylesheet">
+
+
+</head>
+
+<body class="bg-white font-family-franklin">
+  <!-- Top Bar Nav -->
+  <nav class="w-full h-12 py-1 bg-pyellow">
+        
+    <div class="w-full container mx-auto flex flex-wrap items-center justify-between">
+        <div></div>
+        <nav>
+            <ul class="flex items-center justify-between text-white no-underline">
+                <li><a class="hover:text-gray-200 hover:underline px-4" href="./discover.html">Discover</a></li>
+                <li><a class="hover:text-gray-200 hover:underline px-4" href="./index.html">Catalog</a></li>
+                <li><a class="hover:text-gray-200 hover:underline px-4" href="./index.html"><img class="h-10 inline" src="./images/logo.png" alt=""></a></li>
+                <li><a class="hover:text-gray-200 hover:underline px-4" href="./about.html">About</a></li>
+                <li><a class="hover:text-gray-200 hover:underline px-4" href="./contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="flex items-center text-lg no-underline text-white pr-6 ">
+            <a class="" href="./login.html">
+                <i class='bx bx-user' ></i>
+            </a>
+        </div>
+    </div>
+
+</nav>
+
+  <!-- Text Header -->
+  <header class="w-full container bg-pred mx-auto">
+    <div class="flex flex-col items-center py-12">
+      <a class="font-bold text-gray-50 uppercase hover:text-gray-700 text-5xl mb-10" href="#">
+        SoloBlogT
+      </a>
+      <div class='max-w-md mx-auto'>
+        <div class="relative flex items-center w-[20rem] h-10 rounded-lg  bg-white overflow-hidden">
+          <div class="grid place-items-center h-full w-12 text-gray-300">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+          </div>
+
+          <input class="peer h-full w-full outline-none text-sm text-gray-700 pr-4" type="text" id="search"
+            placeholder="Search something.." />
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container mx-auto flex flex-wrap py-6">
+    <div class="mt-8 w-full text-center flex flex-col justify-center ">
+        <h1 class="text-5xl text-center mb-4 font-bold text-pred">Write</h1> 
+    </div>
+    <section class="text-gray-600 w-full flex flex-col px-3">
+        <div class="w-full flex justify-start mt-16 mb-8 mx-8 px-4 ">
+            <button
+                class="mr-4 bg-transparent hover:bg-pblue-dark text-pblue font-semibold hover:text-white py-2 px-4 border border-pblue rounded-lg">
+                <a href="./moreof.html" class="">Add cover image </a>
+            </button>
+        </div>
+        <form  class="mx-8 px-4">
+            <div class="mb-8">
+                <label for="large-input" class="block mb-2 text-4xl font-medium text-gray-900">Title</label>
+                <input type="text" id="large-input" class="block w-full p-4 h-12 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-2xl focus:ring-blue-500 focus:border-blue-500">
+            </div>
+            <div class="mb-8">
+                <label for="default-input" class="block mb-2 text-base font-medium text-gray-900 ">Tag #</label>
+                <input type="text" id="default-input" class="bg-gray-50 border border-gray-300 text-gray-900 text-lg rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-4">
+            </div>
+            <div class="mb-8 h-[20rem]">
+                <input id="x" value=""  type="hidden" name="content">
+                <trix-editor input="x" placeholder="write what you want" style="height: 320px;"></trix-editor>
+            </div>
+            <div class="w-full flex justify-start mt-16 mb-8">
+                <button
+                    class="px-4  bg-pblue hover:bg-pblue-dark text-white font-semibold py-2 border border-pblue rounded-lg">
+                    <a href="./moreof.html" class="">Publish post </a>
+                </button>
+            </div>
+        </form>
+        
+    </section>
+  </div>
+  <footer class="text-gray-600 body-font">
+    <hr class=" border-gray-300 my-4">
+    <div class="w-full container mx-auto flex flex-col items-center">
+      <div class="flex flex-col md:flex-row text-center md:text-left md:justify-between py-6">
+          <a href="#" class="uppercase px-3">About Us</a>
+          <a href="#" class="uppercase px-3">Privacy Policy</a>
+          <a href="#" class="uppercase px-3">Terms & Conditions</a>
+          <a href="#" class="uppercase px-3">Contact Us</a>
+      </div>
+      <div class="uppercase pb-6">&copy; soloblogt.com</div>
+  </div>
+  </footer>
+  <html>
